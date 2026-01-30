@@ -26,6 +26,14 @@ spring:
       acks: all
   hateoas:
     use-hal-as-default-json-media-type: true
+  feign:
+    client:
+      config:
+        notification-service:
+          connectTimeout: 3000
+          readTimeout: 5000
+          loggerLevel: full
+
 
 logging:
   level:
